@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/characters.css" />
+  </head>
+  <body>
+    <div class="slide_wrapper">
+      <div class="sound" id="sound">
+        <img src="/media/image/muted.png" alt="" id="muted" />
+        <img src="/media/image/sound.png" alt="" id="sound" />
+      </div>
+      <div class="slides" id="slides">
+        <div class="slide">
+          <div class="video_wrapper" style="position: absolute">
+            <video class="intro video" autoplay muted loop id="video">
+              <source src="media/video/intro.mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="slide" id="legolas">
+          <div class="left">
+            <img src="/media/image/legolas.jpg" alt="" />
+            <div class="left_gradient"></div>
+            <div class="data">
+              <p>
+                Legolas was a Sindar Elf who was part of the Fellowship of the
+                Ring in the Third Age. Son of the Elvenking Thranduil of
+                Mirkwood, Legolas was Mirkwood's prince, a messenger, and a
+                master archer.
+              </p>
+              <div class="triangle"></div>
+            </div>
+          </div>
+          <div class="middle">
+            <p>L</p>
+            <p>E</p>
+            <p>G</p>
+            <p>O</p>
+            <p>L</p>
+            <p>A</p>
+            <p>S</p>
+          </div>
+          <div class="right">
+            <video class="video" muted autoplay loop>
+              <source src="media/video/legolas.mp4" />
+            </video>
+            <div class="right_gradient"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="left">
+            <img src="/media/image/gandalf.jpg" alt="" />
+            <div class="left_gradient"></div>
+            <div class="data">
+              <p>
+                Gandalf the Grey, later known as Gandalf the White, and
+                originally named Olórin, was an Istar (Wizard), dispatched to
+                Middle-earth in the Third Age to combat the threat of Sauron.
+              </p>
+              <div class="triangle"></div>
+            </div>
+          </div>
+          <div class="middle">
+            <p>G</p>
+            <p>A</p>
+            <p>N</p>
+            <p>D</p>
+            <p>A</p>
+            <p>L</p>
+            <p>F</p>
+          </div>
+          <div class="right">
+            <video class="video" muted autoplay loop>
+              <source src="media/video/gandalf.mp4" />
+            </video>
+            <div class="right_gradient"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="left">
+            <img src="/media/image/Aragorn.webp" alt="" />
+            <div class="left_gradient"></div>
+            <div class="data">
+              <p>
+                Aragorn II, son of Arathorn II and Gilraen, also known as
+                Elessar and Strider, was the 16th and last Chieftain of the
+                Dúnedain of the North; later crowned King Elessar Telcontar ,
+                the 26th King of Arnor, 35th King of Gondor and first High King
+                of Gondor and Arnor since the short reign of Isildur.
+              </p>
+              <div class="triangle"></div>
+            </div>
+          </div>
+          <div class="middle">
+            <p>A</p>
+            <p>R</p>
+            <p>A</p>
+            <p>G</p>
+            <p>O</p>
+            <p>R</p>
+            <p>N</p>
+          </div>
+          <div class="right">
+            <video class="video" muted autoplay loop>
+              <source src="media/video/aragorn.mp4" />
+            </video>
+            <div class="right_gradient"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="left">
+            <img src="/media/image/Frodo.webp" alt="" />
+            <div class="left_gradient"></div>
+            <div class="data">
+              <p>
+                Frodo Baggins, son of Drogo Baggins, was a hobbit of the Shire
+                in the late Third Age. He is commonly considered Tolkien's most
+                renowned character for his leading role in the Quest of the
+                Ring.
+              </p>
+              <div class="triangle"></div>
+            </div>
+          </div>
+          <div class="middle">
+            <p>F</p>
+            <p>R</p>
+            <p>O</p>
+            <p>D</p>
+            <p>O</p>
+          </div>
+          <div class="right">
+            <video class="video" muted autoplay loop>
+              <source src="media/video/frodo.mp4" />
+            </video>
+            <div class="right_gradient"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="left">
+            <img src="/media/image/Bilbo.webp" alt="" />
+            <div class="left_gradient"></div>
+            <div class="data">
+              <p>
+                Bilbo Baggins was a Hobbit of the Shire, the main protagonist of
+                The Hobbit and a secondary character in The Lord of the Rings.
+              </p>
+              <div class="triangle"></div>
+            </div>
+          </div>
+          <div class="middle">
+            <p>B</p>
+            <p>I</p>
+            <p>L</p>
+            <p>B</p>
+            <p>O</p>
+          </div>
+          <div class="right">
+            <video class="video" muted autoplay loop>
+              <source src="media/video/bilbo.mp4" />
+            </video>
+            <div class="right_gradient"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="pc"
+      style="
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+      "
+    >
+      Doar pe PC am zis Diana :)
+    </div>
+  </body>
+  <script src="js/characters.js" type="text/javascript"></script>
+</html>
