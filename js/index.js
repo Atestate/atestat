@@ -1,11 +1,11 @@
+let video_wrapper = document.getElementById("video_wrapper");
+let video = document.getElementById("video");
+let logo = document.getElementById("logo");
+let logo_img = document.getElementById("logo_img");
+let logo_text = document.getElementById("logo_text");
+let made_by = document.getElementById("made_by");
+let videos = document.getElementById("videos_wrapper");
 const load = () => {
-  let video_wrapper = document.getElementById("video_wrapper");
-  let video = document.getElementById("video");
-  let logo = document.getElementById("logo");
-  let logo_img = document.getElementById("logo_img");
-  let logo_text = document.getElementById("logo_text");
-  let made_by = document.getElementById("made_by");
-  let videos = document.getElementById("videos_wrapper");
   setTimeout(() => {
     video_wrapper.style.opacity = "1";
   }, 1000);
@@ -38,17 +38,21 @@ const load = () => {
 var oppened = 0;
 var left = document.getElementById("left");
 var right = document.getElementById("right");
-const show_right_data = () => {
+const show_right_data = (fast) => {
   right.style.pointerEvents = "none";
   var right_video = document.getElementById("right_video");
   var left_video = document.getElementById("left_video");
+  var data = document.getElementById("data_right");
   left_video.style.height = "100%";
   right_video.style.opacity = "0";
+  data.style.opacity = "1";
 };
 const hide_right_data = (fast) => {
   right.style.pointerEvents = "all";
   var right_video = document.getElementById("right_video");
   var left_video = document.getElementById("left_video");
+  var data = document.getElementById("data_right");
+  data.style.opacity = "0";
   left_video.style.height = "70%";
   right_video.style.opacity = "1";
   oppened = 0;
@@ -64,6 +68,7 @@ const show_left_data = (fast) => {
   else data.style.opacity = "1";
   left_video.style.opacity = "0";
 };
+
 const hide_left_data = (fast) => {
   left.style.pointerEvents = "all";
   var data = document.getElementById("data_left");
@@ -87,7 +92,7 @@ const add_left_right_events = () => {
     }
     oppened = 2;
     seconds = temp;
-    show_right_data();
+    show_right_data(true);
   });
   left.addEventListener("mouseleave", () => {
     var temp = new Date().getTime() / 1000;
@@ -114,10 +119,24 @@ const add_left_right_events = () => {
   });
 };
 
-load();
 add_left_right_events();
 if (window.innerWidth < 1000) {
   document.getElementById("video_wrapper").remove();
   document.getElementById("videos_wrapper").remove();
   document.getElementById("pc").style.display = "flex";
 }
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const s = urlParams.get("s");
+if (s == 1) {
+  video_wrapper.style.opacity = "1";
+  console.log("1");
+  logo_text.style.opacity = "1";
+  logo_text.style.top = "110px";
+  logo.style.top = "0%";
+  logo.style.transform = "translateX(-50%)";
+  logo_text.style.top = "110px";
+  videos.style.opacity = "1";
+  video.style.opacity = "0";
+  video_wrapper.style.pointerEvents = "none";
+} else load();

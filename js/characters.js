@@ -99,3 +99,12 @@ if (window.innerWidth < 1000) {
   slides.remove();
   document.getElementById("pc").style.display = "flex";
 }
+
+const button = document.getElementsByClassName("chevron");
+
+for (let i = 0; i < button.length; i++) {
+  button[i].addEventListener("click", () => {
+    console.log("test");
+    move_left();
+  });
+}

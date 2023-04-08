@@ -171,3 +171,21 @@ body {
   padding-left: 160px;
   padding-right: 160px;
 }
+.story_title {
+  color: white;
+  font-family: GOT;
+  letter-spacing: 20px;
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 20px;
+}
+.story_text {
+  margin-top: 50px;
+  font-size: 25px;
+  width: calc(100vw - 200px);
+  padding-left: 100px;
+  padding-right: 100px;
+  /* text-align: center; */
+  color: white;
+}
