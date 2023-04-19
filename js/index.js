@@ -139,4 +139,4 @@ if (s == 1) {
   videos.style.opacity = "1";
   video.style.opacity = "0";
   video_wrapper.style.pointerEvents = "none";
-} else load();
+}
